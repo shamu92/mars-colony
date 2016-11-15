@@ -1,0 +1,41 @@
+.register-page {
+    background: black;
+    height: 100vh;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+form {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.name,
+.age {
+    display: flex;
+    flex-direction: column;
+    color: red;
+}
+
+input [type='text'],
+input [type='number'],
+{
+    width: 100%;
+}
+
+input {
+    background: black;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+select::-ms-expand {
+    display: none;
+}
