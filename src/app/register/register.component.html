@@ -5,10 +5,10 @@
         <input type="text" name="name" id="name" placeholder="Name" [(ngModel)]="colonist.name" />
         <input type="number" name="age" id="age" placeholder="Age" [(ngModel)]="colonist.age" />
 
-        <select>
-            <option value="selected" disabled>Select occupation</option>
-            <option *ngFor= "let job of marsJobs">{{job.name}}</option>
-    </select>
+        <select [(ngModel)]="colonist.job_id" name="job_id">
+            <option value="selected" >Select occupation</option>
+            <option *ngFor= "let job of marsJobs" [value]="job_id">{{job.name}}</option>
+        </select>
         <button class="button" ng-click="enter($event)">Check in</button>
     </form>
     <p>
