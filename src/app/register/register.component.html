@@ -1,27 +1,18 @@
-<div class = "register-page">  
-  <h1>Register</h1>
-  <form action="">
-      <div class="name">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name">
-      </div>
+<div class="register-page">
+    <h1>Register</h1>
+    <form action="submit">
 
-      <div class="age">
-          <label for="age">Age</label>
-          <input type="number" name="age" id="age">
-      </div>
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="number" name="age" id="age" placeholder="Age">
 
-      <div class="occupation">
-          <select>
-            <option value="">Select occupation</option>
-            <option>Dust farmer</option>
-            <option>Alien hunter</option>
-            <option>Battery technician</option>
-            <option value="">Yoga teacher</option>
-            <option value="">Front-end developer</option>
-            
-          </select>
-      </div>
-<h2>Check in</h2>
-  </form>
+        <select>
+      <option value="">Select occupation</option>
+      <option>Dust farmer</option>
+      <option>Alien hunter</option>
+      <option>Battery technician</option>
+      <option value="">Yoga teacher</option>
+      <option value="">Front-end developer</option>
+    </select>
+        <button class="button" ng-click="enter($event)">Check in</button>
+    </form>
 </div>

@@ -1,0 +1,51 @@
+.report-page {
+    background: black;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+h2 {
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    width: 96%;
+    margin: 0 auto;
+}
+
+select {
+    background: black;
+    border: none;
+    color: red;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 0;
+    -webkit-appearance: none;
+    border-bottom: 1px solid white;
+    line-height: 1.5;
+    padding-left: 8px;
+}
+
+textarea {
+    width: 98%;
+    padding: .5rem;
+    margin-top: 2rem;
+}
+
+button {
+    color: white;
+    /*width: 100%;
+    margin: 0 auto;*/
+    margin-top: 6rem;
+    background: black;
+    border: 0;
+    font-size: 1.8rem;
+    font-weight: 200;
+}

@@ -1,41 +1,65 @@
 .register-page {
     background: black;
     height: 100vh;
+    font-family: fantasy;
 }
 
 h1 {
+    padding: 3rem 0;
     color: white;
     text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: lighter;
 }
 
 form {
-    width: 98%;
+    width: 96%;
     margin: 0 auto;
 }
 
-.name,
-.age {
-    display: flex;
-    flex-direction: column;
-    color: red;
-}
-
-input [type='text'],
-input [type='number'],
-{
-    width: 100%;
-}
-
 input {
+    width: 99%;
     background: black;
     border: none;
     border-bottom: 1px solid white;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-left: 8px;
+    line-height: 1.5;
 }
 
-h2 {
-    color: white;
-    text-align: center;
+::-webkit-input-placeholder {
+    color: red;
+    margin-bottom: 2px;
 }
-select::-ms-expand {
-    display: none;
+
+select {
+    background: black;
+    border: none;
+    color: red;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 0;
+    -webkit-appearance: none;
+    border-bottom: 1px solid white;
+    line-height: 1.5;
+    padding-left: 8px;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+button {
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10rem;
+    background: black;
+    border: 0;
+    font-size: 1.8rem;
+    font-weight: 200;
 }
