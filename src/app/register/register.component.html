@@ -6,12 +6,12 @@
         <input type="number" name="age" id="age" placeholder="Age" [(ngModel)]="colonist.age" />
 
         <select [(ngModel)]="colonist.job_id" name="job_id">
-            <option value="selected" >Select occupation</option>
+            <option [value]="NO_JOB_SELECTED">--Select occupation--</option>
             <option *ngFor= "let job of marsJobs" [value]="job_id">{{job.name}}</option>
         </select>
-        <button class="button" ng-click="enter($event)">Check in</button>
+        <button [disabled]="!jobSelected" type="">Check in</button>
     </form>
     <p>
-        {{colonist.name}} - {{colonist.age}} - {{colonist.occupation}}
+        {{colonist.name}} - {{colonist.age}} - {{colonist.job_id}}
     </p>
 </div>
