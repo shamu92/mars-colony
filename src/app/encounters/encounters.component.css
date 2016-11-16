@@ -1,31 +1,53 @@
 .encounters-page {
     width: 98%;
-    margin:0 auto;
+    height: 100vh;
+    font-family: fantasy;
+    margin: 0 auto;
+    background: url(https://www.skotcher.com/wall/604fdf6ffc45d1a810f11d6ebd9a2183/alien-landscape-blue-neptune-planet-starlight.jpg);
 }
+
 h1 {
     font-size: 2rem;
     text-align: center;
+    padding-top: 2rem;
+    color: white;
+    background: url(https://www.skotcher.com/wall/604fdf6ffc45d1a810f11d6ebd9a2183/alien-landscape-blue-neptune-planet-starlight.jpg);
 }
 
 h2 {
     text-align: center;
+    color: white;
+    padding-bottom: 2rem;
+    background: url(https://www.skotcher.com/wall/604fdf6ffc45d1a810f11d6ebd9a2183/alien-landscape-blue-neptune-planet-starlight.jpg);
 }
 
 ul {
-    height: 400px;
+    height: 65vh;
     overflow: auto;
-    margin-top: 2rem;
+    background: url(https://www.skotcher.com/wall/604fdf6ffc45d1a810f11d6ebd9a2183/alien-landscape-blue-neptune-planet-starlight.jpg);
+}
+
+::-webkit-scrollbar {
+    width: 0px;
 }
 
 p {
-    padding-left: 10px;
+    padding: 10px;
+    color: white;
+    background: url(http://www.fortunecafecleveland.com/wp-content/uploads/2015/12/universe-backgrounds-.jpg);
 }
 
+
+/*p:nth-child(2n) {
+    background: url(https://www.themebeta.com/media/cache/resolve/728/files/chrome/images/201510/25/f54aa55df7345795a4e69e6458118b36.jpeg);
+}*/
+
 .report-button {
-    background: black;
+    background: url(https://www.skotcher.com/wall/604fdf6ffc45d1a810f11d6ebd9a2183/alien-landscape-blue-neptune-planet-starlight.jpg);
     color: white;
-    width: %;
+    width: 100%;
     text-align: center;
     height: 100px;
     font-size: 2rem;
+    padding-top: 2rem;
 }

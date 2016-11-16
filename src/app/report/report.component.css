@@ -2,15 +2,19 @@
     background: black;
     height: 100vh;
     text-align: center;
+    font-family: fantasy;
+    background: url(https://www.skotcher.com/wall/604fdf6ffc45d1a810f11d6ebd9a2183/alien-landscape-blue-neptune-planet-starlight.jpg);
 }
 
 h1 {
     color: white;
     font-size: 2rem;
+    padding: 2rem;
 }
 
 h2 {
     color: white;
+    padding-bottom: 2rem;
 }
 
 form {
@@ -48,4 +52,5 @@ button {
     border: 0;
     font-size: 1.8rem;
     font-weight: 200;
+    font-family: fantasy;
 }
