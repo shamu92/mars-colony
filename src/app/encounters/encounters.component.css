@@ -1,3 +1,7 @@
+.encounters-page {
+    width: 98%;
+    margin:0 auto;
+}
 h1 {
     font-size: 2rem;
     text-align: center;
@@ -9,13 +13,19 @@ h2 {
 
 ul {
     height: 400px;
+    overflow: auto;
+    margin-top: 2rem;
+}
+
+p {
+    padding-left: 10px;
 }
 
 .report-button {
     background: black;
     color: white;
-    width: 100%;
+    width: %;
     text-align: center;
     height: 100px;
-    font-size:2rem;
+    font-size: 2rem;
 }
