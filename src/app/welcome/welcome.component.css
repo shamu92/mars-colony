@@ -1,22 +1,25 @@
+.welcome-div {
+    background: url(http://www.sherastrology.com/wp-content/uploads/2016/06/Neptune.jpeg);
+    height: 100vh;
+    font-family: fantasy;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
 h1 {
     text-transform: uppercase;
     color: white;
     font-size: 2.5rem;
-    padding-top: 3rem;
+    padding-left: 1rem;
 }
 
 h2 {
     color: white;
-    margin-top: 3rem;
-    margin-left: 2rem;
+    margin-bottom: 13rem;
+    padding-right: 7rem;
     font-size: 1.5rem;
-}
-
-.welcome-div {
-    background: url(http://www.sherastrology.com/wp-content/uploads/2016/06/Neptune.jpeg);
-    height: 100vh;
-    text-align: center;
-    font-family: fantasy;
+    text-align: right;
 }
 
 
@@ -28,8 +31,8 @@ h2 {
 
 .pulse {
     position: absolute;
-    top: 33%;
-    left: 30%;
+    top: 12%;
+    left: 35%;
     width: 400px;
     height: 400px;
     -webkit-border-radius: 50%;

@@ -18,5 +18,4 @@ export default class EncountersService {
                 .get(this.ENCOUNTERS_JSON)
                 .map((res: Response) => res.json().encounters);
   }
-22
 }
