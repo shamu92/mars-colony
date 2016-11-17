@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Alien } from '../models';
+import { Alien, Encounter } from '../models';
 import AliensService from '../services/aliens.service'
 
 @Component({
@@ -12,7 +12,13 @@ export class ReportComponent implements OnInit {
 
   marsAliens: Alien[]
 
+  report: Encounter;
+
+  NO_ALIENS_SELECTED = '(none)';
+
   constructor(alienService: AliensService) {
+
+    this.report = new Encounter (null,'2012-11-02', 1, null, null )
     alienService.getAliens().subscribe((aliens) => {
       this.marsAliens = aliens;
       console.log(aliens)
@@ -24,4 +30,7 @@ export class ReportComponent implements OnInit {
   ngOnInit() {
   }
 
+getalienSelected(){
+  return this.report.atype === this.NO_ALIENS_SELECTED;
+}
 }

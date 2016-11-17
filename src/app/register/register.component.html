@@ -1,16 +1,16 @@
 <div class="register-page">
     <h1>Register</h1>
 
-    <form #registerForm="ngForm" class="register-form" (ngSubmit)="onSubmit(registerForm)">
+    <form [formGroup]="registerForm" class="register-form" (ngSubmit)="onSubmit($event)">
 
-        <input type="text" name="name" id="name" placeholder="Name" [(ngModel)]="colonist.name" />
-        <input type="number" name="age" id="age" placeholder="Age" [(ngModel)]="colonist.age" />
+        <input type="text" placeholder="Name" formControlName="name" />
+        <input type="number" placeholder="Age" formControlName="age" />
 
-        <select [(ngModel)]="colonist.job_id" name="job_id">
+        <select formControlName="job_id">
             <option [value]="NO_JOB_SELECTED">--Select occupation--</option>
             <option *ngFor= "let job of marsJobs" [value]="job.id">{{job.name}}</option>
         </select>
-        <button type="">Check in</button>
+        <button>Check in</button>
         <!--[disabled]="!jobSelected || registerForm.invalid"-->
     </form>
 </div>
