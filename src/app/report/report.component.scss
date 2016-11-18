@@ -2,7 +2,7 @@
     background: black;
     height: 100vh;
     text-align: center;
-    font-family: fantasy;
+    font-family: 'Aldrich', sans-serif;
     background: url(https://www.skotcher.com/wall/604fdf6ffc45d1a810f11d6ebd9a2183/alien-landscape-blue-neptune-planet-starlight.jpg);
 }
 
@@ -22,6 +22,7 @@ form {
     flex-flow: column;
     width: 100%;
     margin: 0 auto;
+    font-family: 'Aldrich', sans-serif;
 }
 
 select {
@@ -35,12 +36,15 @@ select {
     border-bottom: 1px solid white;
     line-height: 1.5;
     padding-left: 8px;
+    font-family: 'Aldrich', sans-serif;
 }
 
 textarea {
     padding: .5rem;
     margin-top: 2rem;
     background: rebeccapurple;
+    font-family: 'Aldrich', sans-serif;
+
 }
 
 button {
@@ -52,5 +56,5 @@ button {
     border: 0;
     font-size: 1.8rem;
     font-weight: 200;
-    font-family: fantasy;
+    font-family: 'Aldrich', sans-serif;
 }

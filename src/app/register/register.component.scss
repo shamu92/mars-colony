@@ -1,7 +1,7 @@
 .register-page {
     background: black;
     height: 100vh;
-    font-family: fantasy;
+    font-family: 'Aldrich', sans-serif;
 }
 
 h1 {
@@ -28,11 +28,13 @@ input {
     margin-bottom: 10px;
     padding-left: 8px;
     line-height: 1.5;
+    font-family: 'Aldrich', sans-serif;
 }
 
 ::-webkit-input-placeholder {
     color: red;
     margin-bottom: 2px;
+    font-family: 'Aldrich', sans-serif;
 }
 
 select {
@@ -46,6 +48,7 @@ select {
     border-bottom: 1px solid white;
     line-height: 1.5;
     padding-left: 8px;
+    font-family: 'Aldrich', sans-serif;
 }
 
 select:-moz-focusring {
@@ -56,6 +59,9 @@ select:-moz-focusring {
 @keyframes blink {
     50% {
         border: 1px solid #ff0000;
+        -moz-box-shadow: 0 0 5px 5px #ff0000;
+        -webkit-box-shadow: 0 0 5px 5px#ff0000;
+        box-shadow: 0 0 5px 5px #ff0000;
     }
 }
 
@@ -66,7 +72,6 @@ select:-moz-focusring {
 form select.ng-pristine,
 form input.ng-pristine {
     color: #ff0000;
-    border-bottom: 1px solid white;
 }
 
 button {
@@ -78,7 +83,7 @@ button {
     border: 0;
     font-size: 1.8rem;
     font-weight: 200;
-    font-family: fantasy;
+    font-family: 'Aldrich', sans-serif;
 }
 
 p {
