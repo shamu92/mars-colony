@@ -52,8 +52,9 @@ onSubmit(event){
   const date = this.getDate();
   const atype = this.reportForm.get('atype').value;
   const action = this.reportForm.get('action').value;
+  const colonist_id = localStorage.getItem('colonist_id');
 
-  const encounter = new NewEncounter(date, '4', atype, action);
+  const encounter = new NewEncounter(date, colonist_id, atype, action);
 
   if (this.reportForm.invalid) {
 

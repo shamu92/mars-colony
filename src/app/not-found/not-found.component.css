@@ -1,0 +1,14 @@
+.not-found-page {
+    height: 100vh;
+    background: url("http://wallpapercave.com/wp/SwDOKKx.jpg");
+    background-size: cover;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.3rem;
+    color: white;
+    font-family: fantasy;
+    padding: 1.5rem;
+    line-height:1.5;
+}

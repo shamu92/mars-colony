@@ -14,12 +14,12 @@ h1 {
 }
 
 form {
-    width: 96%;
+    width: 99%;
     margin: 0 auto;
 }
 
 input {
-    width: 99%;
+    width: 98%;
     background: black;
     border: none;
     border-bottom: 1px solid white;
@@ -38,7 +38,7 @@ input {
 select {
     background: black;
     border: none;
-    color: red;
+    color: white;
     width: 100%;
     font-size: 1rem;
     border-radius: 0;
@@ -51,6 +51,22 @@ select {
 select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000;
+}
+
+@keyframes blink {
+    50% {
+        border: 1px solid #ff0000;
+    }
+}
+
+.invalidForm .ng-invalid {
+    animation: blink .5s step-end infinite alternate;
+}
+
+form select.ng-pristine,
+form input.ng-pristine {
+    color: #ff0000;
+    border-bottom: 1px solid white;
 }
 
 button {

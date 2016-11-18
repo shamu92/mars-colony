@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { NewColonist, Job } from '../models';
-import JobsService from '../services/jobs.service'
+import JobsService from '../services/jobs.service';
+import ColonistsService from '../services/colonists.service'
+
 import {cantBe} from '../shared/Validators'
 
 import { Router, ActivatedRoute } from '@angular/router';
@@ -14,17 +16,19 @@ import { Router, ActivatedRoute } from '@angular/router';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  providers:[JobsService]
+  providers:[JobsService, ColonistsService]
 })
 export class RegisterComponent implements OnInit {
 
   colonist: NewColonist;
   marsJobs: Job[];
   registerForm: FormGroup;
+  blinkRed : boolean;
   
   NO_JOB_SELECTED = '(none)';
 
 constructor(jobService: JobsService,
+            private colonistsService:ColonistsService,
             private router: Router) {
     
   jobService.getJobs().subscribe((jobs) => {
@@ -51,17 +55,25 @@ tooOld(value:number): ValidatorFn {
 onSubmit(event){
   event.preventDefault();
   if (this.registerForm.invalid) {
-
+    this.blinkRed = true;
   } else {
     // const colonist = this.registerForm.get (['name', 'age', 'job_id'])
     const name = this.registerForm.get('name').value;
     const age = this.registerForm.get('age').value;
     const job_id = this.registerForm.get('job_id').value;
+
+    const colonist = new NewColonist(name, age, job_id);
     // new NewColonist(name, age, job_id);
-    this.router.navigate(['/encounters'])
-    console.log("OK, let's register this new colonist", new NewColonist(name, age, job_id))
-  }
+    this.colonistsService.submitColonist(colonist).subscribe(
+      (colonist)=> {
+          localStorage.setItem('colonist_id', JSON.stringify(colonist.id));
+          this.router.navigate(['/encounters'])      
+          }, err => {
+      console.log(err)});
+  //   console.log("OK, let's register this new colonist", new NewColonist(name, age, job_id))
+  // }
   // event.preventDefault();
 // registerForm.form.controls.name.invalid= true
-}
+    }
+};
 }
