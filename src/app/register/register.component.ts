@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { NewColonist, Job } from '../models';
 import JobsService from '../services/jobs.service'
+import {cantBe} from '../shared/Validators'
 
-function cantBe(value:string): ValidatorFn {
-  return (control:AbstractControl): {[key:string]: any} => {
-    return value === '(none)' ? {'cant be none': {value}} : null;
-  };
-}
+// function cantBe(value:string): ValidatorFn {
+//   return (control:AbstractControl): {[key:string]: any} => {
+//     return value === '(none)' ? {'cant be none': {value}} : null;
+//   };}
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -31,11 +31,7 @@ constructor(jobService: JobsService) {
     console.log(err);
   });
 }
-cantBe(value:string): ValidatorFn {
-  return (control:AbstractControl): {[key:string]: any} => {
-    return control.value === value ? {'cant be value': {value}}: null;
-  };
-}
+
 tooOld(value:number): ValidatorFn {
   return (control:AbstractControl): {[key:string]: any} => {
     return control.value > value ? {'too old': {value}} : null;
@@ -45,7 +41,7 @@ tooOld(value:number): ValidatorFn {
     this.registerForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(2)]),
       age: new FormControl('', [Validators.required, this.tooOld(114)]),
-      job_id: new FormControl('(none)',[this.cantBe(this.NO_JOB_SELECTED)])
+      job_id: new FormControl('(none)',[cantBe(this.NO_JOB_SELECTED)])
     });
   }
 
