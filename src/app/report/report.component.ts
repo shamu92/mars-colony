@@ -3,7 +3,12 @@ import { Alien, NewEncounter } from '../models';
 import AliensService from '../services/aliens.service'
 import EncountersService from '../services/encounters.service'
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
+
 import{ cantBe } from '../shared/Validators'
+
+import { Router, ActivatedRoute } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-report',
@@ -20,7 +25,8 @@ export class ReportComponent implements OnInit {
   NO_ALIEN_SELECTED = '(none)';
 
   constructor(private alienService: AliensService,
-              private encountersService: EncountersService) {
+              private encountersService: EncountersService,
+              private router: Router) {
     // this.report = new Encounter (null,'2012-11-02', 1, null, null )
     alienService.getAliens().subscribe((aliens) => {
       this.marsAliens = aliens;
@@ -47,20 +53,19 @@ onSubmit(event){
   const atype = this.reportForm.get('atype').value;
   const action = this.reportForm.get('action').value;
 
-  const encounter = new NewEncounter(date, 4, atype, action);
+  const encounter = new NewEncounter(date, '4', atype, action);
 
   if (this.reportForm.invalid) {
 
   } else {
     this.encountersService.submitEncounter(encounter).subscribe(
       ()=> {
-          console.log("Success")
+          this.router.navigate(['/encounters'])
     }, err => {
       console.log(err)});
     // const colonist = this.registerForm.get (['name', 'age', 'job_id'])
     // new NewColonist(name, age, job_id);
-    console.log("Let's register this new colonist", new NewEncounter(date, 4, atype, action))
-  }
+    }
 };
 }
 
