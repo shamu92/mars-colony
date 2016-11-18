@@ -42,12 +42,16 @@ p {
     background: url(https://www.themebeta.com/media/cache/resolve/728/files/chrome/images/201510/25/f54aa55df7345795a4e69e6458118b36.jpeg);
 }*/
 
-.report-button {
+.report-button-background {
     background: url(https://www.skotcher.com/wall/604fdf6ffc45d1a810f11d6ebd9a2183/alien-landscape-blue-neptune-planet-starlight.jpg);
-    color: white;
     width: 100%;
+    height: 30px;
     text-align: center;
-    height: 100px;
+    padding: 1rem 0;
+}
+
+.report-button {
+    color: white;
     font-size: 2rem;
-    padding-top: 2rem;
+    text-decoration: none;
 }

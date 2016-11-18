@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Encounter } from '../models';
 import EncountersService from '../services/encounters.service'
 
+import { Router, ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-encounters',
   templateUrl: './encounters.component.html',
@@ -14,7 +16,8 @@ export class EncountersComponent implements OnInit {
   marsEncounters: Encounter[];
 
 
-  constructor(encounterService: EncountersService) {
+  constructor(encounterService: EncountersService,
+                private router: Router) {
     
     encounterService.getEncounters().subscribe((encounters) => {
       this.marsEncounters = encounters;
@@ -26,7 +29,11 @@ export class EncountersComponent implements OnInit {
 
   ngOnInit() {
   }
+onSubmit(event){
+  event.preventDefault();
+  this.router.navigate(['/register']);
 
+}
 
 
 }

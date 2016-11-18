@@ -4,6 +4,8 @@ import { NewColonist, Job } from '../models';
 import JobsService from '../services/jobs.service'
 import {cantBe} from '../shared/Validators'
 
+import { Router, ActivatedRoute } from '@angular/router';
+
 // function cantBe(value:string): ValidatorFn {
 //   return (control:AbstractControl): {[key:string]: any} => {
 //     return value === '(none)' ? {'cant be none': {value}} : null;
@@ -22,7 +24,8 @@ export class RegisterComponent implements OnInit {
   
   NO_JOB_SELECTED = '(none)';
 
-constructor(jobService: JobsService) {
+constructor(jobService: JobsService,
+            private router: Router) {
     
   jobService.getJobs().subscribe((jobs) => {
     this.marsJobs = jobs;
@@ -55,6 +58,7 @@ onSubmit(event){
     const age = this.registerForm.get('age').value;
     const job_id = this.registerForm.get('job_id').value;
     // new NewColonist(name, age, job_id);
+    this.router.navigate(['/encounters'])
     console.log("OK, let's register this new colonist", new NewColonist(name, age, job_id))
   }
   // event.preventDefault();
