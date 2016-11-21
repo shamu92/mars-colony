@@ -8,18 +8,21 @@
 }
 
 h1 {
+    font-family: 'Aldrich', sans-serif;
     text-transform: uppercase;
-    color: white;
-    font-size: 2.3rem;
+    color: lightgrey;
+    font-size: 1.9rem;
     padding-left: 1rem;
+    text-align: center;
 }
 
 h2 {
-    color: white;
+    font-family: 'Aldrich', sans-serif;
+    color: lightgrey;
     margin-bottom: 13rem;
-    padding-right: 7rem;
+    /*padding-right: 7rem;*/
     font-size: 1.5rem;
-    text-align: right;
+    text-align: center;
 }
 
 
@@ -27,12 +30,12 @@ h2 {
 
 .pulser {
     position: relative;
+    margin: 0 auto;
 }
 
 .pulse {
     position: absolute;
-    top: 30%;
-    left: 30%;
+    top: 6%;
     width: 400px;
     height: 400px;
     -webkit-border-radius: 50%;

@@ -7,13 +7,13 @@
 }
 
 h1 {
-    color: white;
+    color: lighten(#004f76, 15%);
     font-size: 2rem;
     padding: 2rem;
 }
 
 h2 {
-    color: white;
+    color: lighten(#004f76, 15%);
     padding-bottom: 2rem;
 }
 
@@ -37,18 +37,24 @@ select {
     line-height: 1.5;
     padding-left: 8px;
     font-family: 'Aldrich', sans-serif;
+    &:focus {
+        outline-color: #004f76;
+    }
 }
 
 textarea {
     padding: .5rem;
     margin-top: 2rem;
-    background: rebeccapurple;
+    background: #004f76;
+    color: lightgrey;
     font-family: 'Aldrich', sans-serif;
-
+    &:focus {
+        outline-color: #004f76;
+    }
 }
 
 button {
-    color: white;
+    color: lighten(#004f76, 15%);
     /*width: 100%;
     margin: 0 auto;*/
     margin-top: 6rem;
