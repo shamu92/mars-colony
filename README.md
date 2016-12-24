@@ -1,17 +1,21 @@
+# Neptune Colony App
 
+# Summary
+The purpose of this project was to create a mobile-first, single-page application using Angular 2 with TypeScript.
 
-## Colony App
+The project was designed the model the registration of a fictitious 'Neptune Colonist' and the logging of encounters with aliens.
 
-For this project we created a simple app using AnuglarJS 2.
+# Technologies and Tools Used:
+* Angular 2
+* TypeScript
+* APIs
+* HTML5
+* SASS
+* Webpack
+* Browser local storage
 
-It is able to get data from a JSON file as well as post it.
-This is done in the form of registering a colonist and posting
-an alien encounter. 
+# References
+* Angular 2 - https://angular.io/docs/ts/latest/
+* Postman API Developer - https://www.getpostman.com/
 
-It has form validation integrated in though ngForm.
-It also uses the angular ng-classes to style certain areas
-of the app.
-
-The styling was done by using scss files.
-
-Created by: Sasha Altshteyn as a code along project at RED Academy
+### Created by: Aleksandr Altshteyn
