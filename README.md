@@ -1,9 +1,9 @@
 # Neptune Colony App
 
 # Summary
-The purpose of this project was to create a mobile-first, single-page application using Angular 2 with TypeScript.
+The purpose of this project was to create a mobile-first application using Angular 2 with TypeScript.
 
-The project was designed the model the registration of a fictitious 'Neptune Colonist' and the logging of encounters with aliens.
+The project was designed to model the registration of a fictitious 'Neptune Colonist' and the logging of encounters with aliens.
 
 # Technologies and Tools Used:
 * Angular 2
@@ -13,6 +13,7 @@ The project was designed the model the registration of a fictitious 'Neptune Col
 * SASS
 * Webpack
 * Browser local storage
+* Postman API Developer
 
 # References
 * Angular 2 - https://angular.io/docs/ts/latest/
